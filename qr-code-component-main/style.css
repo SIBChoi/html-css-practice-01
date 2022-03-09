@@ -13,4 +13,72 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Outfit', sans-serif;
+}
+
+.body {
+  width: 1440px;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+  background: var(--Light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--White);
+  width: 30rem;
+  height: 60%;
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.253);
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 3s ease-in;
+}
+
+.card-img img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.card-img:hover {
+  /* transform: rotate(90%); */
+}
+
+.card-content {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-title {
+  margin-bottom: 3rem;
+  color: var(--Dark-blue);
+}
+
+.card-text {
+  font-size: 1.3rem;
+  color: var(--Grayish-blue);
+}
+
+.attribution {
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
 }
