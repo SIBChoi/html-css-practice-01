@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#4ae, #4ae 50%, #fff 50%, #fff 100%);
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card:hover {
+  width: 600px;
+}
+
+.card .imgBx {
+  min-width: 300px;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  background: #fff;
+}
+
+.card .imgBx .img {
+  background: url('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7e90a06d-13fa-46d0-8cde-e3f3f0c61363/air-max-pre-day-be-true-shoes-gjZtQJ.png');
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  filter: brightness(1.1);
+  transition: 0.5s;
+}
+
+.card:hover .imgBx .img {
+  transform: rotate(-35deg) translateX(-20px);
+}
+
+.card .details {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background: #4ae;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 25px;
+  color: #fff;
+  z-index: 1;
+}
+
+.card:hover .details {
+  left: 300px;
+}
+
+.card .details::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+}
+.card .details h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.card .details h3 span {
+  font-size: 0.8em;
+  font-weight: 300;
+  opacity: 0.85;
+  text-transform: none;
+}
+
+.card .details h4 {
+  margin-top: 20px;
+  line-height: 1em;
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card .details p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.card .details .size {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.card .details .size li {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.card .details .size li:hover {
+  background: #fff;
+  color: #4ae;
+  opacity: 1;
+}
+
+.card .details .group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card .details .group h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.card .details .group h2 sup {
+  font-weight: 300;
+}
+
+.card .details .group h2 small {
+  font-size: 0.75em;
+}
+
+.card .details .group a {
+  color: #4ae;
+  text-decoration: none;
+  padding: 10px 25px;
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
